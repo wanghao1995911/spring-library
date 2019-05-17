@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <script th:src="@{/scripts/admin/login.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/login/style.css}" href="css/style.css">
+<style>
+    a:link{text-decoration: none;color: #454545}
+    a:hover{font-size: 120%}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+    <div class="container">
+        <div class="left">
+            <div class="login">登录</div>
+            <div class="eula">管理者登录<br>
+                <a th:href="@{/}">读者登陆</a>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="form">
+                <form id="adminLoginForm" action="/adminLogin" method="post">
+                    <label for="adminName">AdminName</label>
+                    <input type="text" id="adminName" name="adminName">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <input type="submit" id="submit" value="Submit" >
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<!--<script th:src="@{/scripts/admin/login.js}"></script>-->
+
+</html>
